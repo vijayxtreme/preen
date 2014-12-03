@@ -16,7 +16,14 @@
 
 $(function(){
 	var h = $(document).height();
+	var w = $(document).width();
 
+	if(w>667){
+		var photoH = w * 3/4;
+		$(".photos").css({
+			"height":photoH
+		})
+	}
 	var cssObj = {
 		"height": h
 	};
@@ -53,6 +60,14 @@ $(function(){
 		$("#item-window").css("display", "none");
 	});
 
-	//Bring up menu
+	//Upload Page
+	$("#client-list").on('click', function(){
+		$("#input-area").toggle();
+		$("#tags-area").hide();
+	});
+	$("#tags-list").on('click', function(){
+		$("#tags-area").toggle();
+		$("#input-area").hide();
+	});
 	
 });

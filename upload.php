@@ -33,7 +33,7 @@ $outjson = json_encode($out); //json encode the array from PHP
 				<br /><input name="file[]" type="file" id="file"/>
 			</div>
 			
-			<button id="add_more">Add More Files</button>
+			<input id="add_more" value="Add More Files" type="submit"/>
 			<br /><br /><input id="submit" type="submit" name="submit" value="Submit" />
 			
 			<br /><input id="editForm" type="submit" name="edit" value="Change" /> 
@@ -41,6 +41,7 @@ $outjson = json_encode($out); //json encode the array from PHP
 			<br /><input id="formID" type="hidden" val="">
 			 		</form>
 		</div>
+		<input id="client-list" type="submit" value="Client List" /> <input id="tags-list" type="submit" value="Tag List" type="submit" />
 		<div id="input-area">
 		<h1>List of Clients</h1>
 		<p>Click client name to display information below</p>
@@ -71,7 +72,7 @@ $outjson = json_encode($out); //json encode the array from PHP
 	</div>
 </div>
 
-</div>
+
 <script>
 var listclients = <?php echo $outjson ?>;
 var totalimuploads = 0;

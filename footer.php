@@ -1,3 +1,8 @@
+
+
+<br style="clear:both;" />
+
+<div id="footer">
 <div id="contact-area-m">
 	<div class="socialmedia-m">
 		<ul class="socialicons">
@@ -19,12 +24,10 @@
 	TEL +1 (213) 625-2100
 	</div>
 	</div>
+
+<div id="desktop"><a href="<?php bloginfo('url'); ?>/"><img class="preenlogo" src="<?php bloginfo('stylesheet_directory'); ?>/images/preenlogo.png" /></a></div>
+
+</div>
+</div><!--#primary-->
 </div><!--#wrapper-->
 </div><!--#main_body-->
-<br style="clear:both;" />
-<div id="footer">
-
-
-<a href="<?php bloginfo('url'); ?>/"><img class="preenlogo" src="<?php bloginfo('stylesheet_directory'); ?>/images/preenlogo.png" /></a>
-</div>
-

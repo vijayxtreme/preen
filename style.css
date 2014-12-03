@@ -71,7 +71,7 @@ button {
   display: none; }
 
 /* DESKTOP========================== */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1025px) {
   /* Global Desktop Styles ==========*/
   /* Enlcosures */
   /* Typography */
@@ -416,7 +416,7 @@ button {
     width: 28px; }
   #photo.photos {
     display: none; }
-  #mobile_nav, #contact-area-m, .socialmedia-m {
+  #mobile_nav, #contact-area-m, .socialmedia-m, #client-list, #tags-list {
     display: none; }
   .selected {
     color: #3f3f3f !important; } }

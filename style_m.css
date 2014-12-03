@@ -24,7 +24,7 @@ button {
   display: none; }
 
 /* MOBILE=========================== */
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
   /* Some stuff */
   /* Display None */
   /* Enlcosures */
@@ -34,9 +34,8 @@ button {
   /* Overlay Window */
   /* BIRD CLASSES */
   img {
-    max-width: 100%;
-    max-height: 240px; }
-  #secondary, #mobile_nav, #contact-area, .socialmedia, #footer {
+    width: 100%; }
+  #secondary, #mobile_nav, #contact-area, .socialmedia, #input-area, #tags-area, #desktop {
     display: none; }
   #press .desktop {
     display: none; }
@@ -51,7 +50,8 @@ button {
     display: none;
     float: left;
     width: 30%;
-    background: #7d7669; }
+    background: #7d7669;
+    padding-top: 80px; }
     #mobile_nav a {
       color: #fff;
       font-size: 11px;
@@ -127,7 +127,7 @@ button {
   .links-1-main {
     width: 0px;
     padding-left: 0px; }
-  #myForm input, #myForm textarea, #myForm button {
+  #myForm input, #myForm textarea {
     width: 98%; }
   #myForm input {
     padding-left: 0; }
@@ -165,6 +165,15 @@ button {
     background: #fff;
     border: 1px solid #000;
     color: #000; }
+  #press-panel {
+    font-size: 11px;
+    line-height: 14px; }
+  #press table {
+    margin-top: 10px;
+    width: 100%; }
+    #press table img {
+      max-width: 116px;
+      max-height: 150px; }
   #teamtable {
     table-layout: fixed;
     width: 100%; }

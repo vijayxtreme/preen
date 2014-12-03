@@ -7,20 +7,20 @@ $base-size: 11px;
 $image-height-std: 240px;
 
 /* MOBILE=========================== */
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1024px) {
 	/* Some stuff */
 	img {
-		max-width: $full-width;
-		max-height: $image-height-std;
+		width: $full-width;
+		// max-height: $image-height-std;
 	}
 	/* Display None */
-	#secondary, #mobile_nav, #contact-area, .socialmedia, #footer{ 
+	#secondary, #mobile_nav, #contact-area, .socialmedia, #input-area, #tags-area, #desktop{ 
 		display: none;
 	}
 	#press .desktop {
 		display:none;
 	}
-
+	
 	/* Enlcosures */
 	.wrapper {
 		position: relative;
@@ -38,17 +38,13 @@ $image-height-std: 240px;
 		float: left;
 		width: 30%;
 		background: $std-gray;
+		padding-top:80px;
 		
-		
-
-
 		a{
 			color: $white;
 			font-size:11px;
 			font-family: Arial;
 			line-height: 18px;
-		
-
 		}
 
 
@@ -174,7 +170,7 @@ $image-height-std: 240px;
 	#myForm {
 	
 
-		input, textarea, button{
+		input, textarea{
 			width:98%;
 			// padding:0;
 		}
@@ -234,6 +230,22 @@ $image-height-std: 240px;
 
 	}
 
+	//Press Page
+	#press-panel {
+		font-size:11px;
+		line-height: 14px;
+	}
+
+	#press table {
+		margin-top: 10px;
+		width: 100%;
+		img {
+					max-width:116px;
+					max-height:150px;
+				}
+		// margin: 0 auto;
+	}
+
 	//Team Page
 
 	#teamtable {
@@ -245,6 +257,8 @@ $image-height-std: 240px;
 			td {
 				vertical-align: top;
 				padding:2%;
+
+				
 
 			}
 		}
@@ -273,6 +287,10 @@ $image-height-std: 240px;
 		background-color: $white;
 		z-index:1001;
 	}
+
+	//UPLOAD PAGE
+
+
 
 	/* BIRD CLASSES */
 

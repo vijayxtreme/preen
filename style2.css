@@ -1,0 +1,22 @@
+/* 
+Theme Name: Preened
+
+Author: Preened
+Author URI: http://wordpress.org/
+Description: The template for the Preened site.  Add your comments here, or edit this stylesheet to make changes to the display for the site.
+Version: 1.0
+Template: twentyten
+
+
+*/
+/* @import url("../twentyten/style.css"); */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* PreenInc SCSS File */
+body {
+  font: 100% Helevetica, sans-serif;
+  color: #333; }
+
+/*# sourceMappingURL=style2.css.map */

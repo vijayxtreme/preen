@@ -3,8 +3,6 @@
 Template Name: Work
 */
 
-
-
 include('form-process.php');
 
 $out = getCustomers();
@@ -46,7 +44,7 @@ die();
 <div id="primary">
 	<div class="entry-content">
 	<div id="post-12" class="post-12 page type-page status-publish hentry">
-	<div id="links-1" style="width:242px; padding-left:0px;">
+	<div id="links-1" class="links-1-main" style="">
 		<ul class="basic-list">
 		<?php 
 			$count = count($out);
@@ -76,7 +74,9 @@ for($i=0; $i<$count; $i++){
 
 		</ul>
 	</div>
-	<div id="item-window">
+
+	<div id="item-window" class="white_overlay">
+		
 		<div id="photo"></div>
 		<div id="bird-nav">
 		</div>

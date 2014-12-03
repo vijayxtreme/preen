@@ -1,0 +1,47 @@
+/* ==== BASE STYLES ====*/
+
+@font-face {
+	font-family: "Swis721";
+	src: url('fonts/swis721'); }
+
+$default-font: Helvetica, sans-serif;
+
+/* Color Scheme */
+$dark-gray: rgba(63,63,63,1.0) !important;
+$std-gray: #7d7669;
+$light-gray: #aaa;
+$lighter-gray: #e5e3e0;
+$beige: #83796b;
+$jet-black: #110C00;
+$black: #000;
+$white: #fff;
+
+/* Typography */
+a {			
+	color: $light-gray;
+	text-decoration: none;
+}
+
+/* General */
+body {
+	color: $std-gray;
+}
+button {
+	padding: .5em 1em;
+	border: 0 rgba(0,0,0,0);
+	border-radius: 4px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Special Effects */
+.selected {
+	color: $dark-gray;
+}
+
+/* Display None for Mobile Divs =======*/
+#mobile-header {
+	display: none;
+}

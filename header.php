@@ -3,16 +3,23 @@
 <head>
 <title>Preen</title>
 <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width maximum-scale=1">
 <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon.ico">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" />
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/style_m.css" />
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-1.11.1.min.js"></script>
+<script src="<?php bloginfo('stylesheet_directory'); ?>/js/scripts.js"></script>
 </head>
 <body>
-<div id="wrapper">
+<div id="mobile-header">
+	<a href="<?php bloginfo('url'); ?>/"><img class="preenlogo" src="<?php bloginfo('stylesheet_directory'); ?>/images/preenlogo.png" /></a>
+	<button class="shelf">≡</button>
+</div>
+<div class="wrapper">
 <div id="header"></div>
 <div id="contact-area">
-<div id="socialmedia">
-	<ul id="socialicons">
+<div class="socialmedia">
+	<ul class="socialicons">
 		<li><a target="_blank" href="mailto:info@preened.com"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/email.jpg" /></a></li>
 		<li><a target="_blank" href="http://instagram.com/preeninc"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/in.jpg" /></a></li>
 		<li><a target="_blank" href="http://www.pinterest.com/preeninc/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/pn.jpg" /></a></li>
@@ -31,3 +38,5 @@
 	TEL +1 (213) 625-2100
 	</div>
 </div>
+
+

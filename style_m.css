@@ -1,0 +1,160 @@
+/* ==== BASE STYLES ====*/
+@font-face {
+  font-family: "Swis721";
+  src: url('fonts/swis721'); }
+
+/* Color Scheme */
+/* Typography */
+a {
+  color: #aaa;
+  text-decoration: none; }
+
+/* General */
+body {
+  color: #7d7669; }
+
+button {
+  padding: 0.5em 1em;
+  border: 0 rgba(0, 0, 0, 0);
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
+
+/* Special Effects */
+.selected {
+  color: #3f3f3f !important; }
+
+/* Display None for Mobile Divs =======*/
+#mobile-header {
+  display: none; }
+
+/* MOBILE=========================== */
+@media screen and (max-width: 599px) {
+  /* Some stuff */
+  /* Display None */
+  /* Enlcosures */
+  /* Navigation */
+  /* Typography */
+  /* Specifically targets h2s only with .entry-title */
+  /* Overlay Window */
+  img {
+    max-width: 100%;
+    max-height: 240px; }
+  #secondary, #contact, #contact-area, #footer, #bird-nav, .socialmedia, .socialicons {
+    display: none; }
+  .wrapper {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 70px;
+    font-family: Helvetica, sans-serif;
+    font-size: 11px;
+    z-index: 1; }
+  #mobile-header {
+    position: relative;
+    z-index: 2;
+    display: block;
+    height: 70px;
+    background: #fff;
+    opacity: 1;
+    position: fixed;
+    width: 100%; }
+  img.preenlogo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 60px; }
+  button.shelf {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 40px;
+    font-size: 22px;
+    padding: 0;
+    line-height: 0px;
+    width: 40px;
+    background-color: #e5e3e0; }
+  h2 {
+    color: #000;
+    margin: 5px 0px;
+    font-size: 14px; }
+  h2.entry-title {
+    border-bottom: 1px dashed #aaa;
+    padding-bottom: 5px;
+    font-style: italic; }
+  .entry-meta {
+    font-size: 9px;
+    font-style: italic;
+    margin-bottom: 10px; }
+  .entry-utility {
+    margin-bottom: 20px; }
+  a#preenlogo img {
+    margin: 0 auto;
+    width: 320px;
+    height: 90px; }
+  #primary {
+    background: url('images/feather-bg.png') no-repeat;
+    opacity: 0.8;
+    background-position: 50% 40%;
+    width: 100%;
+    height: 570px;
+    padding-top: 50px; }
+    #primary a {
+      color: #3f3f3f !important;
+      text-decoration: none; }
+  #links-1 {
+    float: left;
+    text-align: right;
+    font-size: 11px;
+    color: #e5e3e0;
+    width: 50%; }
+    #links-1 ul li {
+      line-height: 15px;
+      font-size: 8px;
+      padding: 1px 3px 4.95px 0px; }
+  .links-1-main {
+    width: 0px;
+    padding-left: 0px; }
+  #links-2 {
+    float: left;
+    text-align: left;
+    margin-top: 2px;
+    font-size: 9px;
+    color: #aaa; }
+    #links-2 ul li {
+      font-size: 7px; }
+    #links-2 ul {
+      padding-left: 1px; }
+  #item-window {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 15%;
+    left: 50%;
+    margin-left: -50%;
+    z-index: 2;
+    text-align: center;
+    color: #000;
+    line-height: 16px;
+    font-size: 11px; }
+  .close {
+    position: absolute;
+    z-index: 1002;
+    right: 0px;
+    line-height: 0px;
+    padding: 0;
+    height: 25px;
+    width: 25px;
+    background: #fff;
+    border: 1px solid #000;
+    color: #000; }
+  #photo.photos {
+    display: none; }
+  .white_overlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 80%;
+    background-color: #fff;
+    z-index: 1001; } }

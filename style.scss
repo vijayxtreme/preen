@@ -1,4 +1,3 @@
-
 /* 
 Theme Name: Preened
 
@@ -7,21 +6,581 @@ Author URI: http://wordpress.org/
 Description: The template for the Preened site.  Add your comments here, or edit this stylesheet to make changes to the display for the site.
 Version: 1.0
 Template: twentyten
-
-
 */
+
 /* @import url("../twentyten/style.css"); */
+@import 'reset';
+@import 'base';
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
-/* PreenInc SCSS File */
+/* DESKTOP========================== */
+@media screen and (min-width: 600px) {
+	
 
-$font-stack: Helevetica, sans-serif;
-$primary-color: #333;
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
+	/* Global Desktop Styles ==========*/
+
+	/* Enlcosures */
+	.wrapper {
+		position: relative;
+		width:1400px;
+		font-family: $default-font;
+		font-size: 12px;
+	}
+	/* Typography */
+	h2 {
+		color: $black;
+		margin:5px 0px;
+		font-size: 14px;
+	}
+	/* Specifically targets h2s only with .entry-title */
+	h2.entry-title {
+		border-bottom: 1px dashed $light-gray;
+		padding-bottom: 5px;
+		font-style:italic;
+	}
+	.entry-meta {
+		font-size:9px;
+		font-style:italic;
+		margin-bottom:10px;
+	}
+	.entry-utility {
+		margin-bottom:20px;
+	}
+	#primary {
+		float: left;
+		background: url('images/feather-bg.png') top center no-repeat;
+		opacity: 0.8;
+		background-position-x: 163px;
+		background-position-y: 85px;
+		height: 604px;
+		width:980px;
+		margin-left: -112px;
+		padding-top: 162px;
+
+		a {			
+			color: $dark-gray;
+			text-decoration: none;
+		}
+		/* Nesting via SASS */
+	}
+
+	/* Logo */
+
+	img.preenlogo {
+		position: absolute;
+		top: 111px;
+		left:120px;
+		width:147px;
+		height:90px;
+	}	
+
+	/* INDEX PAGE */
+	#links-1 {
+		float: left;
+		text-align: right;
+		padding-left: 58px;
+		font-size: 11px;
+		color: $lighter-gray;
+		height:542px;
+		/* width: 242px; */
+
+		ul li {
+			line-height: 15px;
+			font-size: 8px;
+			padding: 1px 3px 4.95px 0px;
+		}
+	}	
+	
+	.links-1-main{
+		width:242px; 
+		padding-left:0px;
+	}
+
+		
+	#links-2 {
+		float: left;
+		text-align: left;
+		margin-top: 31px;
+		font-size: 9px;
+		width: 104px;
+		color: $light-gray;
+
+		ul li {
+			font-size: 7px;		
+		}
+		ul {
+			padding-left:1px;
+		}
+	}
+		
+		
+	.basic-list {
+		padding-top: 29px;
+	}
+	.darker {
+		color: $jet-black !important;
+	}
+	#item-window {
+		display: none;
+		padding-top: 34px;
+		position: absolute;
+		z-index: 20;
+		margin-left: 435px;
+		width: 580px;
+	}
+	#no-photo {
+		line-height:515px;
+		text-align: center;
+		color: $white;
+	}
+
+	#photo {
+		position: absolute;
+		height: 400px;
+		width: 600px;
+		background: $white;
+		margin-left:0px;
+		float: left;
+		border: 1px solid $black;
+		z-index:1
+		img {
+			width: 600px;
+			height: 400px;
+		}
+	}
+
+	#bird-nav{
+		position: absolute;
+		z-index: 21;
+		width: 20px;
+		top: 34px;
+		left: 610px;
+		a{
+			display:block;
+		}
+	}
+	#text{
+		clear: both;
+		padding-top: 410px;
+		max-width: 597px;
+		line-height: 20px;
+		p {
+			padding-top:20px;
+			margin: 0;
+			line-height: 14px;
+			font-size: 10px;
+			color: $dark-gray;
+		}
+	}
+		
+	.picstext {
+		color: $dark-gray;
+	}
+	#spinner {
+		display:none;
+		position:absolute;
+		z-index:-1;
+		top:175px;
+		left: 242px;
+	}
+		
+
+	#primary-inside {
+		float: left;
+		width: 730px;
+	}
+		
+	/* INSIDE PAGES */
+	
+	#content {
+		margin-top: 0px;	
+		float: left;
+		width:730px;
+		margin-top:253px;
+	}
+	
+	#press-panel {
+		float: left;
+		font-size: 11px;
+		width: 361px;
+		height: 351px;
+		color: $beige;
+		margin-top: 210px;
+		line-height: 21px;
+	}
+
+	#press {
+		float: left;
+		font-size: 11px;
+		height: 420px;
+		overflow-y: scroll;
+		overflow-x:none;
+	}
+	#awards-content p {
+		margin: 20px 0;
+		font-size: 11px;
+		width: 441px;
+		color: $std-gray;
+	}
+	
+	.entry-content p {
+		font-size:11px;
+		line-height: 20px;
+		color: $std-gray;
+	}
+			
+	#inside-wrap {
+		height:640px;
+		width: 1080px;
+		background: url('images/feather-bg.png') no-repeat;
+		background-position-x: 98px;
+		background-position-y: -40px;
+	}
+
+
+	#secondary {
+		float: left;
+		padding-top: 226px;
+		margin-left:120px;
+		width:190px;
+
+	}
+	#design-bird {
+		margin-top: 20px;
+		background: url('images/designbird.png') no-repeat;
+		height: 33px;
+		width: 92px;
+	}
+	#design-bird-2 {
+		margin-top: -60px;
+		background: url('images/designbird2.png') no-repeat;
+		height: 105px;
+		width: 133px;
+	}
+	ul#sidebar-nav {
+		li {
+			font-size: 9px;
+			line-height: 15px;
+		
+			a:hover {
+				color: rgb(63, 63, 63) !important;
+				opacity: 1.0;
+			}
+		}
+
+	}
+	
+	.sidelist {
+		opacity: 0.7;
+	}
+
+	#contact {
+		color: $std-gray;
+		line-height: 12px;
+		font-size: 7px;
+		letter-spacing: 1px;
+	}
+	#space {
+		height:25px;
+	}
+	#bio {
+		background: url('images/bio.png') no-repeat;
+		height:57px;
+		width:94px;
+	}
+	#awards, #press{
+			margin-top: 210px;
+	}
+	#awards p{
+		line-height: 21px;
+	}
+	#twitter {
+		display: block;
+		width:120px;
+		height:120px;
+		background: url('images/twitter.png') no-repeat;
+		text-indent: -9999px;
+	}
+	.socialmedia {
+		width:168px;
+		
+		ul li {
+			display: inline;
+		}
+		img {
+			width: 311px;
+			height: 28px;
+		}
+	}
+
+	/* This is some funky CSS below for the IE Scrollbar */
+
+	/* TEAM */
+	#team {
+		margin-top: 0px;
+		height:521px; 
+		overflow-y: none;
+		overflow-x:none;
+	}
+	#team::-webkit-scrollbar{
+		width: 9px;
+		background-color: #fff;
+		cursor:pointer;
+	}
+	#team::-webkit-scrollbar-thumb{
+		background-color:#FAF4F4;
+		border-radius:10px;
+	}
+	#team::-webkit-scrollbar-thumb:hover{
+		background-color:#aaa;
+
+		/*border:1px solid #333333;*/
+	}
+	#team::-webkit-scrollbar-button:end:decrement {
+		background-image: url('images/scroll.png');
+	}
+
+	table#teamtable {
+		width: 100%;
+		border-collapse: collapse;
+		table-layout: fixed;
+		font-size:11px;
+	}
+	#teamtable td:nth-child(1){
+		width:120px;
+		height:120px;
+	}
+	#teamtable td:nth-child(2){
+		width:80%;
+		padding-top:7px;	
+		border-bottom: 1px solid #eee;
+
+	}
+	#teamtable tr {
+	}
+	#teamtable td {
+		padding: 10px;
+		vertical-align: top;
+		line-height:18px;
+	}
+
+
+	/* BIRD CLASSES */
+
+	.bird-selected {
+		background-positon:-36px 0 !important;
+	}
+
+	.bird {
+		position: absolute;
+	}
+
+	.bird-8 {
+		bottom: 176px;
+		background: url('images/bird-8.png') ;
+		height: 21px;
+		width: 36px;
+
+	}
+
+	.bird-8:hover {
+		background-position:-36px 0;
+		
+	}
+
+	.bird-7 {
+		bottom: 151px;
+		background: url('images/bird-7.png');
+		height: 25px;
+		width: 36px;
+
+	}
+	.bird-7:hover {
+		background-position: -36px 0;
+	}
+	.bird-6 {
+		bottom: 131px;
+		background: url('images/bird-6.png') ;
+		height: 20px;
+		width: 36px;
+
+	}
+	.bird-6:hover {
+		background-position: -36px 0;
+	}
+	.bird-5 {
+		bottom: 108px;
+		background: url('images/bird-5.png');
+		height: 23px;
+		width: 36px;
+
+	}
+	.bird-5:hover {
+		background-position: -36px 0;
+	}
+	.bird-4 {
+		bottom: 84px;
+		background: url('images/bird-4.png') ;
+		height: 24px;
+		width: 36px;
+
+	}
+	.bird-4:hover {
+		background-position: -36px 0;
+	}
+	.bird-3 {
+		bottom: 61px;
+		background: url('images/bird-3.png') ;
+		height: 23px;
+		width: 36px;
+
+	}
+	.bird-3:hover {
+		background-position: -36px 0;
+	}
+	.bird-2 {
+		bottom: 38px;
+		background: url('images/bird-2.png');
+		height: 23px;
+		width: 36px;
+
+	}
+	.bird-2:hover {
+		background-position: -36px 0;
+	}
+	.bird-1 {
+		bottom: 20px;
+		background: url('images/bird-1.png');
+		height: 18px;
+		width: 36px;
+
+	}
+	.bird-1:hover {
+		background-position: -36px 0;
+	}
+
+	#contact-area {
+		position: absolute;
+		right: 163px;
+		top: 120px;
+		font-size: 9px;
+		z-index: 4;
+	}
+
+	#footer {
+		clear:both;
+		width:980px;
+		margin-top: 0px;
+		margin-bottom:200px;
+		margin-left:120px;
+		font-family:helvetica !important;
+		font-size: 11px;
+	}
+	.footer-text {
+		text-align: center;
+
+		font-style: italic;
+		color: $lighter-gray;
+	}
+
+	/* Regular Styles */
+
+	a.admin-styles {
+		color: $jet-black;
+	}
+
+	#form-area {
+		float:left;
+		width:365px;
+		padding-top: 45px;
+		padding-left: 50px;
+		text-align: left;
+		color: $black;
+	}
+	#input-area {
+		float: left;
+		width:135px;
+		height:350px;
+		padding-top: 45px;
+		text-align: left;
+		color: $black;
+	}
+	#input-area ul li {
+		font-size:12px;
+		list-style-type: square;
+	}
+	input.newcustomer, textarea.newcustomer, input.newtags {
+		margin:5px 0px;
+	}
+
+	input.newcustomer {
+		width: 300px;
+	}
+	textarea.newcustomer {
+		width:300px !important;
+		height:150px !important;
+	}
+	textarea.newtags {
+		width:300px !important;
+		height:50px !important;
+	}
+	#result-area {
+		color: $black;
+		padding-left: 52px;
+		text-align: left;
+		padding-top: 10px;
+	}
+	ul.client-list{
+		height:350px;
+		overflow: auto;
+	}
+
+	#result {
+		margin:5px 0;
+	}
+	#tags-area{
+		padding-top: 45px;
+		padding-left:50px;
+		float:left;
+		color: $black;
+	}
+	ul#tags-area-list li {
+		line-height: 12px;
+		padding: 2px 0px;
+		margin: 2px 0px;
+		font-size:11px;
+		text-align: center;
+	}
+	ul#tags-area-list li a{
+		padding:2px;
+		background: rgb(118, 201, 240);
+		color: #fff;
+	}
+	ul#tags-area-list {
+		overflow: auto;
+		height:350px;
+	}
+
+	#google-map{
+		margin-top: 5px;
+	}
+	.socialmedia {
+		width: 309px;
+		padding-left: 2px;
+	}
+	ul.socialicons li {
+		display: inline;
+		list-style-type: none;
+		padding-right: 4.0px;
+	}
+	.socialicons img {
+		height:28px;
+		width:28px;
+	}
+	#photo.photos{
+		display:none;
+	}
+
 }
+
+

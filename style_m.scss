@@ -128,7 +128,7 @@ $image-height-std: 240px;
 	.entry-utility {
 		margin-bottom:20px;
 	}
-	.entry-content {
+	.uploadArea {
 		font-size: 11px;
 		line-height: 16px;
 	}
@@ -243,16 +243,18 @@ $image-height-std: 240px;
 
 			td {
 				vertical-align: top;
-				padding:0px 2%;
+				padding:2%;
+				width:50%;
+
 			}
 		}
 		
 
 	}
 
-	#teamtable tr td:first-child {
-		width:40%;
-	}
+	// #teamtable tr td:first-child {
+	// 	width:40%;
+	// }
 
 
 	#photo.photos{
@@ -265,7 +267,6 @@ $image-height-std: 240px;
 		top: 0%;
 		left: 0%;
 		width: 100%;
-		height: 80%;
 		background-color: $white;
 		z-index:1001;
 	}

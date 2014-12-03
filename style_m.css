@@ -96,7 +96,7 @@ button {
     margin-bottom: 10px; }
   .entry-utility {
     margin-bottom: 20px; }
-  .entry-content {
+  .uploadArea {
     font-size: 11px;
     line-height: 16px; }
   a#preenlogo img {
@@ -168,9 +168,8 @@ button {
     table-layout: fixed; }
     #teamtable tr td {
       vertical-align: top;
-      padding: 0px 2%; }
-  #teamtable tr td:first-child {
-    width: 40%; }
+      padding: 2%;
+      width: 50%; }
   #photo.photos {
     display: none; }
   .white_overlay {
@@ -178,6 +177,5 @@ button {
     top: 0%;
     left: 0%;
     width: 100%;
-    height: 80%;
     background-color: #fff;
     z-index: 1001; } }

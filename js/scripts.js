@@ -45,6 +45,7 @@ $(function(){
 	$(".links").on('click', function(e){
 		e.preventDefault();
 		 $("html, body").animate({ scrollTop: 0 }, 600);
+		 $(".white_overlay").height(h);
 	});
 
 	//Allows for touch to close the window too.

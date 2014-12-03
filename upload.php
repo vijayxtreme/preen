@@ -20,7 +20,7 @@ $outjson = json_encode($out); //json encode the array from PHP
 
 <div id="primary">
 <div class="entry-content">
-	<div>
+	<div class="uploadArea">
 		<div id="form-area">
 		<h1 id="form-message">Enter a new client</h1>
 		<form id="myForm" name="myForm" enctype="multipart/form-data" onsubmit="return validateForm()" action="<?php bloginfo('url');?>/form-process/" method="post">

@@ -32,10 +32,11 @@ button {
   /* Typography */
   /* Specifically targets h2s only with .entry-title */
   /* Overlay Window */
+  /* BIRD CLASSES */
   img {
     max-width: 100%;
     max-height: 240px; }
-  #secondary, #mobile_nav, #contact, #contact-area, #footer, #bird-nav, .socialmedia, .socialicons {
+  #secondary, #mobile_nav, #contact, #contact-area, #footer, .socialmedia, .socialicons {
     display: none; }
   #press .desktop {
     display: none; }
@@ -182,4 +183,64 @@ button {
     left: 0%;
     width: 100%;
     background-color: #fff;
-    z-index: 1001; } }
+    z-index: 1001; }
+  #bird-nav {
+    width: 100%;
+    margin: 0 auto; }
+    #bird-nav a {
+      display: inline-block;
+      text-align: center; }
+  .bird-selected {
+    background-positon: -36px 0 !important; }
+  .bird {
+    position: absolute; }
+  .bird-8 {
+    background: url('images/bird-8.png');
+    height: 21px;
+    width: 36px; }
+  .bird-8:hover {
+    background-position: -36px 0; }
+  .bird-7 {
+    background: url('images/bird-7.png');
+    height: 25px;
+    width: 36px; }
+  .bird-7:hover {
+    background-position: -36px 0; }
+  .bird-6 {
+    background: url('images/bird-6.png');
+    height: 20px;
+    width: 36px; }
+  .bird-6:hover {
+    background-position: -36px 0; }
+  .bird-5 {
+    background: url('images/bird-5.png');
+    height: 23px;
+    width: 36px; }
+  .bird-5:hover {
+    background-position: -36px 0; }
+  .bird-4 {
+    background: url('images/bird-4.png');
+    height: 24px;
+    width: 36px; }
+  .bird-4:hover {
+    background-position: -36px 0; }
+  .bird-3 {
+    background: url('images/bird-3.png');
+    height: 23px;
+    width: 36px; }
+  .bird-3:hover {
+    background-position: -36px 0; }
+  .bird-2 {
+    background: url('images/bird-2.png');
+    height: 23px;
+    width: 36px; }
+  .bird-2:hover {
+    background-position: -36px 0; }
+  .bird-1 {
+    background: url('images/bird-1.png');
+    height: 18px;
+    width: 36px; }
+  .bird-1:hover {
+    background-position: -36px 0; }
+  #text {
+    clear: both; } }

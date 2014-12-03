@@ -49,7 +49,7 @@ $(function(){
 	});
 
 	//Allows for touch to close the window too.
-	$(".close, #item-window").on('click', function() {
+	$("#photo").on('click', function() {
 		$("#item-window").css("display", "none");
 	});
 

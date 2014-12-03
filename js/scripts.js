@@ -15,6 +15,13 @@
 
 
 $(function(){
+	var h = $(document).height();
+
+	var cssObj = {
+		"height": h
+	};
+
+	$("#mobile_nav").css(cssObj);
 
 	$(".shelf").clickToggle(function(){
 			$("#mobile_nav").show();

@@ -191,7 +191,7 @@ $("#links-2 ul").css({"margin-top":"-"+secpadd+"px"});
 	//links
 $(".links").click(function(e){
 	e.preventDefault();
-	$("#primary").css("background","none");
+	//$("#primary").css("background","none");
 	$("#item-window").hide();
 	$("#photo").html("");
 	$("#text").text("");

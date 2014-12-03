@@ -66,10 +66,6 @@ button {
   border-radius: 4px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
 
-/* Special Effects */
-.selected {
-  color: #3f3f3f !important; }
-
 /* Display None for Mobile Divs =======*/
 #mobile-header {
   display: none; }
@@ -87,6 +83,7 @@ button {
   /* TEAM */
   /* BIRD CLASSES */
   /* Regular Styles */
+  /* Special Effects */
   .wrapper {
     position: relative;
     width: 1400px;
@@ -474,4 +471,8 @@ button {
     height: 28px;
     width: 28px; }
   #photo.photos {
-    display: none; } }
+    display: none; }
+  #mobile_nav {
+    display: none; }
+  .selected {
+    color: #3f3f3f !important; } }

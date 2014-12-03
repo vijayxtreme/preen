@@ -34,15 +34,27 @@ $image-height-std: 240px;
 		display: none;
 		float: left;
 		width: 30%;
-		background: gray;
-		height:480px;
-		font-size:11px;
-		font-family: Arial;
+		background: $std-gray;
+		
+		
+
 
 		a{
-			color: white;
+			color: $white;
+			font-size:11px;
+			font-family: Arial;
+			line-height: 18px;
+		
+
 		}
+
+
 	}
+	#mobile_nav a.selected{
+		color: yellow;
+			
+	}
+
 	#main_body{
 		float: left;
 		width: 100%;
@@ -170,11 +182,14 @@ $image-height-std: 240px;
 		}
 	}
 
+	#primary-inside {
+		line-height: 16px;
+	}
+
 	#item-window {
 		display: none;
 		position: absolute;
 		width: 100%;
-		top: 15%;
 		left: 50%;
 		margin-left: -50%;
 		z-index: 2;
@@ -201,6 +216,27 @@ $image-height-std: 240px;
 
 	}
 
+	//Team Page
+
+	#teamtable {
+		table-layout:fixed;
+
+		tr {
+
+			td {
+				vertical-align: top;
+				padding:0px 2%;
+			}
+		}
+		
+
+	}
+
+	#teamtable tr td:first-child {
+		width:40%;
+	}
+
+
 	#photo.photos{
 		display:none;
 	}
@@ -216,5 +252,7 @@ $image-height-std: 240px;
 		z-index:1001;
 	}
 
+
+	
 
 }

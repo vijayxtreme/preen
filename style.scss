@@ -581,6 +581,16 @@ Template: twentyten
 		display:none;
 	}
 
+	//Mobile stuff
+	#mobile_nav{
+		display: none;
+	}
+
+	/* Special Effects */
+	.selected {
+		color: $dark-gray;
+	}
+
 }
 
 

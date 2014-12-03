@@ -1,5 +1,3 @@
-<?php if ( get_option('permalink_structure') ) { echo 'permalinks enabled'; } ?>
-
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 

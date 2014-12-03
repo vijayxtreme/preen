@@ -1,5 +1,6 @@
 
 </div><!--#wrapper-->
+</div><!--#main_body-->
 <br style="clear:both;" />
 <div id="footer">
 

@@ -38,7 +38,9 @@ die();
 			
 			
 ?>
+
 <?php get_header(); ?>
+
 <?php get_sidebar(); ?>
 
 <div id="primary">
@@ -78,8 +80,7 @@ for($i=0; $i<$count; $i++){
 	<div id="item-window" class="white_overlay">
 		
 		<div id="photo"></div>
-		<div id="bird-nav">
-		</div>
+		<div id="bird-nav"></div>
 		<div id="text"></div>
 	</div>
 	</div>
@@ -87,6 +88,16 @@ for($i=0; $i<$count; $i++){
 </div>
 
 
+
+<div id="contact">
+<?php if(is_page('awards')){ ?>
+	
+<?php }elseif(is_page('press')) {?>
+	
+<?php }else { ?>
+	<!-- <p id="design-bird"></p> -->
+<?php } ?> 
+</div>
 
 <script>
 

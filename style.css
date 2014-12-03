@@ -106,8 +106,7 @@ button {
     float: left;
     background: url('images/feather-bg.png') top center no-repeat;
     opacity: 0.8;
-    background-position-x: 163px;
-    background-position-y: 85px;
+    background-position: 163px 85px;
     height: 604px;
     width: 980px;
     margin-left: -112px;
@@ -202,8 +201,7 @@ button {
     top: 175px;
     left: 242px; }
   #primary-inside {
-    float: left;
-    width: 730px; }
+    float: left; }
   #content {
     margin-top: 0px;
     float: left;
@@ -222,7 +220,8 @@ button {
     font-size: 11px;
     height: 420px;
     overflow-y: scroll;
-    overflow-x: none; }
+    overflow-x: none;
+    padding-left: 50px; }
   #press .desktop {
     width: 400px;
     margin-left: 35px; }
@@ -240,9 +239,7 @@ button {
   #inside-wrap {
     height: 640px;
     width: 1080px;
-    background: url('images/feather-bg.png') no-repeat;
-    background-position-x: 98px;
-    background-position-y: -40px; }
+    background: url('images/feather-bg.png') 98px -40px no-repeat; }
   #secondary {
     float: left;
     padding-top: 226px;

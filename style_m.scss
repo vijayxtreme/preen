@@ -14,7 +14,7 @@ $image-height-std: 240px;
 		max-height: $image-height-std;
 	}
 	/* Display None */
-	#secondary, #mobile_nav, #contact, #contact-area, #footer, .socialmedia, .socialicons{ 
+	#secondary, #mobile_nav, #contact-area, .socialmedia, #footer{ 
 		display: none;
 	}
 	#press .desktop {
@@ -379,6 +379,23 @@ $image-height-std: 240px;
 
 	#text{
 		clear:both;
+	}
+
+	//Social Icons
+	.socialmedia-m {
+		width:100%;
+	}
+	#contact-area-m {
+		font-size: 7.5px;
+		text-align:center;
+	}
+
+	ul.socialicons li {
+		display:inline;
+	}
+	.socialicons img {
+		height: 28px;
+		width: 28px; 
 	}
 
 	

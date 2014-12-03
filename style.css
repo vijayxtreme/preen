@@ -416,7 +416,7 @@ button {
     width: 28px; }
   #photo.photos {
     display: none; }
-  #mobile_nav {
+  #mobile_nav, #contact-area-m, .socialmedia-m {
     display: none; }
   .selected {
     color: #3f3f3f !important; } }

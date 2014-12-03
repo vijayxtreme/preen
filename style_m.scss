@@ -17,6 +17,9 @@ $image-height-std: 240px;
 	#secondary, #mobile_nav, #contact, #contact-area, #footer, #bird-nav, .socialmedia, .socialicons{ 
 		display: none;
 	}
+	#press .desktop {
+		display:none;
+	}
 
 	/* Enlcosures */
 	.wrapper {
@@ -125,7 +128,10 @@ $image-height-std: 240px;
 	.entry-utility {
 		margin-bottom:20px;
 	}
-
+	.entry-content {
+		font-size: 11px;
+		line-height: 16px;
+	}
 
 	a#preenlogo img {
 		margin:0 auto;
@@ -165,8 +171,20 @@ $image-height-std: 240px;
 		width:0px; 
 		padding-left:0px;
 	}
+	#myForm {
 	
-		
+
+		input, textarea, button{
+			width:98%;
+			// padding:0;
+		}
+		input {
+			padding-left: 0;
+
+		}
+	}
+
+
 	#links-2 {
 		float: left;
 		text-align: left;

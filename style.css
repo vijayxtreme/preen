@@ -224,6 +224,11 @@ button {
     height: 420px;
     overflow-y: scroll;
     overflow-x: none; }
+  #press .desktop {
+    width: 400px;
+    margin-left: 35px; }
+  #press .mobile {
+    display: none; }
   #awards-content p {
     margin: 20px 0;
     font-size: 11px;

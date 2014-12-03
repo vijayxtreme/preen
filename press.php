@@ -18,7 +18,7 @@ Template Name: Press
 	</div>
 </div>
 
-			<div id="primary-inside" style="width:400px; margin-left:35px;">
+			<div id="primary-inside" class="desktop mobile">
 
 <div id="press">
 <?php

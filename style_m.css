@@ -37,6 +37,8 @@ button {
     max-height: 240px; }
   #secondary, #mobile_nav, #contact, #contact-area, #footer, #bird-nav, .socialmedia, .socialicons {
     display: none; }
+  #press .desktop {
+    display: none; }
   .wrapper {
     position: relative;
     width: 90%;
@@ -94,6 +96,9 @@ button {
     margin-bottom: 10px; }
   .entry-utility {
     margin-bottom: 20px; }
+  .entry-content {
+    font-size: 11px;
+    line-height: 16px; }
   a#preenlogo img {
     margin: 0 auto;
     width: 320px;
@@ -121,6 +126,10 @@ button {
   .links-1-main {
     width: 0px;
     padding-left: 0px; }
+  #myForm input, #myForm textarea, #myForm button {
+    width: 98%; }
+  #myForm input {
+    padding-left: 0; }
   #links-2 {
     float: left;
     text-align: left;

@@ -238,13 +238,13 @@ $image-height-std: 240px;
 
 	#teamtable {
 		table-layout:fixed;
+		width: 100%;
 
 		tr {
 
 			td {
 				vertical-align: top;
 				padding:2%;
-				width:50%;
 
 			}
 		}
@@ -252,9 +252,12 @@ $image-height-std: 240px;
 
 	}
 
-	// #teamtable tr td:first-child {
-	// 	width:40%;
-	// }
+	#teamtable tr td:first-child {
+		width:30%;
+	}
+	#teamtable tr td:nth-child(2) {
+		width:70%;
+	}
 
 
 	#photo.photos{

@@ -10,7 +10,7 @@
 			<li><a target="_blank" href="http://instagram.com/preeninc"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/in.jpg" /></a></li>
 			<li><a target="_blank" href="http://www.pinterest.com/preeninc/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/pn.jpg" /></a></li>
 			<li><a target="_blank" href="https://www.facebook.com/preeninc"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/fb.jpg" /></a></li>
-			<li><a target="_blank" href="https://plus.google.com/u/0/b/114939697687431501947/+PreenIncLosAngeles/about"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/gp.jpg" /></a></li>
+			<li><a target="_blank" href="https://plus.google.com/110693999040436855322" rel="publisher"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/gp.jpg" /></a></li>
 			<li><a target="_blank" href="https://www.linkedin.com/company/preen-inc-"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/ln.jpg" /></a></li>
 			<li><a target="_blank" href="http://www.youtube.com/user/preeninc"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/yt.jpg" /></a></li>
 			<li><a target="_blank" href="https://twitter.com/preeninc"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/tw.jpg" /></a></li>

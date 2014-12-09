@@ -405,7 +405,7 @@ $image-height-std: 240px;
 	}
 	#contact-area-m {
 		padding-top:20px;
-		font-size: 7.5px;
+		font-size: 0.9em;
 		text-align:center;
 	}
 
@@ -413,10 +413,25 @@ $image-height-std: 240px;
 		display:inline;
 	}
 	.socialicons img {
-		height: 28px;
-		width: 28px; 
+		height: 5.1%;
+		width: 5.1%; 
+		padding:0px 2.6px;
 	}
 
-	
+	@media screen and (max-width: 640px) {
+		#contact-area-m {
+			padding-top:20px;
+			font-size: 7.5px;
+			text-align:center;
+		}
+
+		ul.socialicons li {
+			display:inline;
+		}
+		.socialicons img {
+			height: 28px;
+			width: 28px; 
+		}
+	}
 
 }

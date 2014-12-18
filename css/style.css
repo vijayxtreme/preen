@@ -202,11 +202,12 @@ ul li {
     top: 175px;
     left: 242px; }
   #primary-inside {
-    float: left; }
+    float: left;
+    width: 800px; }
   #content {
     margin-top: 0px;
     float: left;
-    width: 730px;
+    width: 100%;
     margin-top: 253px; }
   #press-panel {
     float: left;

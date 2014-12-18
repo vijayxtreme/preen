@@ -18,9 +18,8 @@ Template Name: Press
 	</div>
 </div>
 
-			<div id="primary-inside" class="desktop mobile">
 
-<div id="press">
+<div id="press" class="desktop mobile">
 <?php
 			/* Run the loop to output the page.
 			 * If you want to overload this in a child theme then include a file
@@ -31,7 +30,6 @@ Template Name: Press
 
 </div>
 
-</div>
 <script>
 $(function(){
 	$("p.wp-caption-text").hide();

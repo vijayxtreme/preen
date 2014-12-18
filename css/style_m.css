@@ -218,15 +218,16 @@ ul li {
     width: 100%; }
   #contact-area-m {
     padding-top: 20px;
-    font-size: 0.9em;
+    font-size: 0.8em;
     text-align: center; }
   ul.socialicons li {
     display: inline; }
   .socialicons img {
-    height: 5.1%;
-    width: 5.1%;
-    padding: 0px 2.6px; }
-  @media screen and (max-width: 640px) {
+    height: 28px;
+    width: 28px;
+    padding: 0px 2.6px;
+    margin-bottom: 10px; }
+  @media screen and (max-width: 320px) {
     #contact-area-m {
       padding-top: 20px;
       font-size: 7.5px;
@@ -234,5 +235,5 @@ ul li {
     ul.socialicons li {
       display: inline; }
     .socialicons img {
-      height: 28px;
-      width: 28px; } } }
+      height: 24px;
+      width: 24px; } } }

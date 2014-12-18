@@ -19,6 +19,9 @@ button {
   border-radius: 4px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
 
+ul li {
+  list-style-type: none; }
+
 /* Display None for Mobile Divs =======*/
 #mobile-header {
   display: none; }
@@ -105,7 +108,7 @@ button {
     width: 320px;
     height: 90px; }
   #primary {
-    background: url('images/feather-bg.png') no-repeat;
+    background: url('../images/feather-bg.png') no-repeat;
     opacity: 0.8;
     background-position: 50% 40%;
     width: 100%;
@@ -204,49 +207,49 @@ button {
   .bird {
     position: absolute; }
   .bird-8 {
-    background: url('images/bird-8.png');
+    background: url('../images/bird-8.png');
     height: 21px;
     width: 36px; }
   .bird-8:hover {
     background-position: -36px 0; }
   .bird-7 {
-    background: url('images/bird-7.png');
+    background: url('../images/bird-7.png');
     height: 25px;
     width: 36px; }
   .bird-7:hover {
     background-position: -36px 0; }
   .bird-6 {
-    background: url('images/bird-6.png');
+    background: url('../images/bird-6.png');
     height: 20px;
     width: 36px; }
   .bird-6:hover {
     background-position: -36px 0; }
   .bird-5 {
-    background: url('images/bird-5.png');
+    background: url('../images/bird-5.png');
     height: 23px;
     width: 36px; }
   .bird-5:hover {
     background-position: -36px 0; }
   .bird-4 {
-    background: url('images/bird-4.png');
+    background: url('../images/bird-4.png');
     height: 24px;
     width: 36px; }
   .bird-4:hover {
     background-position: -36px 0; }
   .bird-3 {
-    background: url('images/bird-3.png');
+    background: url('../images/bird-3.png');
     height: 23px;
     width: 36px; }
   .bird-3:hover {
     background-position: -36px 0; }
   .bird-2 {
-    background: url('images/bird-2.png');
+    background: url('../images/bird-2.png');
     height: 23px;
     width: 36px; }
   .bird-2:hover {
     background-position: -36px 0; }
   .bird-1 {
-    background: url('images/bird-1.png');
+    background: url('../images/bird-1.png');
     height: 18px;
     width: 36px; }
   .bird-1:hover {
@@ -263,7 +266,8 @@ button {
     display: inline; }
   .socialicons img {
     height: 5.1%;
-    width: 5.1%; }
+    width: 5.1%;
+    padding: 0px 2.6px; }
   @media screen and (max-width: 640px) {
     #contact-area-m {
       padding-top: 20px;

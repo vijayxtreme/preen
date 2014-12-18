@@ -287,7 +287,7 @@ $(".links").click(function(e){
 
 	console.log(im.length);
 	var html ="";
-	for(var i=im.length; i>=1; i--){
+	for(var i=1; i<=im.length; i++){
 		html += "<a data-attribute='"+i+"' class='birds bird-"+i+"' href='#'><img src='<?php bloginfo('stylesheet_directory'); ?>/images/bird"+i+".jpg' /></a>";
 	}
 	$("#bird-nav").append(html);

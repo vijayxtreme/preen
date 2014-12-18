@@ -39,6 +39,21 @@ ul li {
 
 
 
+#bird-nav{
+	text-align: center;
+
+}
+
+
+.birds {
+	img {
+		display:inline-block;
+		height:52px;
+		width:38px;
+		margin-top:5px;
+		margin:0 15px;
+	}
+}
 
 /* Display None for Mobile Divs =======*/
 #mobile-header {

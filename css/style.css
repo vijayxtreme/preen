@@ -69,6 +69,16 @@ button {
 ul li {
   list-style-type: none; }
 
+#bird-nav {
+  text-align: center; }
+
+.birds img {
+  display: inline-block;
+  height: 52px;
+  width: 38px;
+  margin-top: 5px;
+  margin: 0 15px; }
+
 /* Display None for Mobile Divs =======*/
 #mobile-header {
   display: none; }
@@ -157,7 +167,6 @@ ul li {
   #item-window {
     display: none;
     padding-top: 34px;
-    position: absolute;
     z-index: 20;
     margin-left: 435px;
     width: 580px; }
@@ -166,29 +175,18 @@ ul li {
     text-align: center;
     color: #fff; }
   #photo {
-    position: absolute;
     height: 400px;
     width: 600px;
     background: #fff;
     margin-left: 0px;
-    float: left;
-    border: 1px solid #000;
-    z-index: 1 img;
-    z-index-width: 600px;
-    z-index-height: 400px; }
-  #bird-nav {
-    position: absolute;
-    z-index: 21;
-    width: 20px;
-    top: 34px;
-    left: 610px; }
-    #bird-nav a {
-      display: block; }
+    border: 1px solid #000; }
+    #photo img {
+      width: 600px;
+      height: 400px; }
   #text {
-    clear: both;
-    padding-top: 410px;
     max-width: 597px;
-    line-height: 20px; }
+    line-height: 20px;
+    text-align: center; }
     #text p {
       padding-top: 20px;
       margin: 0;

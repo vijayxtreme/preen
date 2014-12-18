@@ -286,21 +286,23 @@ $(".links").click(function(e){
 	$("#item-window").show();
 
 	console.log(im.length);
+	var html ="";
 	for(var i=im.length; i>=1; i--){
-		$("#bird-nav").append("<a data-attribute='"+i+"' class='birds bird-"+i+"' href='#'></a>");
+		html += "<a data-attribute='"+i+"' class='birds bird-"+i+"' href='#'><img src='<?php bloginfo('stylesheet_directory'); ?>/images/bird"+i+".jpg' /></a>";
 	}
+	$("#bird-nav").append(html);
 	
 	function transitionImages(){
 		if(countInt<im.length){
 			$(".photos").hide();
 			$(".photos:eq("+countInt+")").show();
-			$(".birds").css({"background-position": "0px 0"});
+			//$(".birds").css({"background-position": "0px 0"});
 			//console.log(secondCount)
-			$(".bird-"+secondCount+"").css({"background-position": "-36px 0"});
+			//$(".bird-"+secondCount+"").css({"background-position": "-36px 0"});
 			countInt++;
 			secondCount++;
 		}else{
-			$(".birds").css({"background-position": "0 0"});
+			//$(".birds").css({"background-position": "0 0"});
 			secondCount = 1;
 			countInt=0;
 		}

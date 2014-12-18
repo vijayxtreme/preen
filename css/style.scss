@@ -122,7 +122,7 @@ Template: twentyten
 	#item-window {
 		display: none;
 		padding-top: 34px;
-		position: absolute;
+
 		z-index: 20;
 		margin-left: 435px;
 		width: 580px;
@@ -134,36 +134,28 @@ Template: twentyten
 	}
 
 	#photo {
-		position: absolute;
+	
 		height: 400px;
 		width: 600px;
 		background: $white;
 		margin-left:0px;
-		float: left;
+		
 		border: 1px solid $black;
-		z-index:1
+	
 		img {
 			width: 600px;
 			height: 400px;
 		}
 	}
 
-	#bird-nav{
-		position: absolute;
-		z-index: 21;
-		width: 20px;
-		top: 34px;
-		left: 610px;
-		a{
-			display:block;
-		}
-	}
+
 	#text{
-		clear: both;
-		padding-top: 410px;
+		
 		max-width: 597px;
 		line-height: 20px;
+		text-align: center;
 		p {
+
 			padding-top:20px;
 			margin: 0;
 			line-height: 14px;
@@ -496,6 +488,7 @@ Template: twentyten
 		display:none;
 	}
 
+	
 	//Mobile stuff
 	#mobile_nav, #contact-area-m, .socialmedia-m, #client-list, #tags-list{
 		display: none;

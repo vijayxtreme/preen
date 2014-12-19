@@ -203,6 +203,8 @@ ul li {
     #teamtable tr td:first-child img {
       height: 120px;
       width: 120px; }
+  #teamtable tr td:nth-child(2) {
+    width: 77%; }
   #photo.photos {
     display: none; }
   .white_overlay {
@@ -247,7 +249,9 @@ ul li {
       width: 60px; }
       #teamtable tr td:first-child img {
         height: 60px;
-        width: 60px; } }
+        width: 60px; }
+    #teamtable tr td:nth-child(2) {
+      width: 77%; } }
   @media screen and (max-width: 320px) {
     #contact-area-m {
       padding-top: 20px;
@@ -271,4 +275,6 @@ ul li {
       width: 60px; }
       #teamtable tr td:first-child img {
         height: 60px;
-        width: 60px; } } }
+        width: 60px; }
+    #teamtable tr td:nth-child(2) {
+      width: 77%; } } }

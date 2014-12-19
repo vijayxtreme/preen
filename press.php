@@ -31,18 +31,7 @@ Template Name: Press
 </div>
 
 <script>
-$(function(){
-	$("p.wp-caption-text").hide();
-	$("#press a").mouseover(function(){
-		var idx=$(this).attr("class");
-		var text = $(this).next().text();
-		//console.log(text);
-		$("#press-panel").html(text);
-	});
 
-
-	
-});
 
 
 </script>

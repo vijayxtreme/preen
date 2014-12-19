@@ -3,11 +3,16 @@
 <head>
 <title>Preen</title>
 <meta charset="utf-8" />
+<meta name="description" content="Restaurant Interior Design Los Angeles" />
+<meta name="keywords" content="restaurant design los angeles" />
+<meta name="author" content="Preen Inc" />
 <meta name="viewport" content="width=device-width maximum-scale=1">
 <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon.ico">
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/css/style.css" />
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/css/style_m.css" />
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" />
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/style_m.css" />
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-1.11.1.min.js"></script>
+<script src="<?php bloginfo('stylesheet_directory'); ?>/js/hammer.min.js"></script>
+<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.hammer.js"></script>
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/scripts.js"></script>
 </head>
 <body>

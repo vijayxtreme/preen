@@ -1,5 +1,5 @@
 /* 
-Theme Name: Preened
+Theme Name: Preen
 
 Author: Preened
 Author URI: http://wordpress.org/
@@ -48,7 +48,7 @@ Template: twentyten
 	}
 	#primary {
 		float: left;
-		background: url('../images//feather-bg.png') top center no-repeat;
+		background: url('images/feather-bg.png') top center no-repeat;
 		opacity: 0.8;
 		background-position: 163px 85px;
 		height: 604px;
@@ -204,10 +204,17 @@ Template: twentyten
 	#press {
 		float: left;
 		font-size: 11px;
-		height: 420px;
+		height: 670px;
 		overflow-y: scroll;
 		overflow-x:none;
 		padding-left:50px;
+
+		table {
+			img {
+				padding:0 1%;
+				max-width: 98%;
+			}
+		}
 	}
 
 	#press .desktop{
@@ -235,7 +242,7 @@ Template: twentyten
 	#inside-wrap {
 		height:640px;
 		width: 1080px;
-		background: url('../images/feather-bg.png') 98px -40px no-repeat;
+		background: url('images/feather-bg.png') 98px -40px no-repeat;
 	}
 
 
@@ -248,13 +255,13 @@ Template: twentyten
 	}
 	#design-bird {
 		margin-top: 20px;
-		background: url('../images/designbird.png') no-repeat;
+		background: url('images/designbird.png') no-repeat;
 		height: 33px;
 		width: 92px;
 	}
 	#design-bird-2 {
 		margin-top: -60px;
-		background: url('../images/designbird2.png') no-repeat;
+		background: url('images/designbird2.png') no-repeat;
 		height: 105px;
 		width: 133px;
 	}
@@ -285,21 +292,30 @@ Template: twentyten
 		height:25px;
 	}
 	#bio {
-		background: url('../images/bio.png') no-repeat;
+		background: url('images/bio.png') no-repeat;
 		height:57px;
 		width:94px;
 	}
 	#awards, #press{
 			margin-top: 210px;
 	}
-	#awards p{
+	.awards-style a{
+		font-family: arial, helvetica, sans-serif; 
+		font-size: 10px;
 		line-height: 21px;
+		color: #aaa;
+	}
+	.awards-style p, .awards-style span{
+		font-family: arial, helvetica, sans-serif; 
+		font-size: 10px;
+		line-height: 21px;
+		color: #aaa;
 	}
 	#twitter {
 		display: block;
 		width:120px;
 		height:120px;
-		background: url('../images/twitter.png') no-repeat;
+		background: url('images/twitter.png') no-repeat;
 		text-indent: -9999px;
 	}
 	.socialmedia {
@@ -338,7 +354,7 @@ Template: twentyten
 		/*border:1px solid #333333;*/
 	}
 	#team::-webkit-scrollbar-button:end:decrement {
-		background-image: url('../images/scroll.png');
+		background-image: url('images/scroll.png');
 	}
 
 	table#teamtable {

@@ -10,7 +10,7 @@ Template Name: Awards
 
 <div id="primary-inside" style="">
 
-<div id="content">
+<div id="content" class="awards-style">
 <?php
 			/* Run the loop to output the page.
 			 * If you want to overload this in a child theme then include a file

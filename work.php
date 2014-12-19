@@ -268,7 +268,7 @@ $(".links").click(function(e){
 	//The images	
 	var im = obj.image;
 	console.log(im);
-	for(var i=0; i<im.length; i++){
+	for(var i=im.length-1; i>=0; i--){
 		$("#photo").append("<img class='photos' src='"+"<?php bloginfo('stylesheet_directory'); ?>"+"/photos/"+im[i].filename+"' />");
 	}
 	

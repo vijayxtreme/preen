@@ -44,11 +44,7 @@ if($_GET){
 		//$out = updateCustomer($id, $name, $descr, $tags, $images);
 		//header('Content-type: text/json');
 		//echo json_encode($_GET);
-			
-		
-	}else {
-		
-	}
+
 	
 	
 }

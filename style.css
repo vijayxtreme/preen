@@ -392,6 +392,9 @@ ul li {
   ul.client-list {
     height: 350px;
     overflow: auto; }
+  #result-image {
+    width: 350px;
+    line-height: 28px; }
   #result {
     margin: 5px 0; }
   #tags-area {

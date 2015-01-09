@@ -8,6 +8,8 @@ $con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
 if($_GET){
 		$out = array();
+		
+
 	if($_GET['action']== "del"){				
 		//WP usually closes connections to DB, so have to reinit 
 		
@@ -17,29 +19,31 @@ if($_GET){
 		
 		echo json_encode($out);	
 		
-	}else if($_GET['action']=="edit"){
-		$id = $_GET['id'];
-		$data = $_GET['data'];
+	}else if($_GET['edit']){
+		$id = $_GET['formID'];
+		$name = $_GET['clientname'];
+		$descr = $_GET['descr'];
+		$tags = $_GET['tags'];
+		$images = $_GET['images'];
+		$files = $_GET['file'];
+
+		$images = array_merge($images, $files);
+		$files ="";
 		
-		//	print_r($data);
-		$out = array();
-		foreach($data as $key=>$val){
-			$out[$val['name']] = $val['value'];
-		}	
-		header("Content-type: text/json");
-		//print_r($out);//$out[clientname], $out[descr], $out[tags]
-		//Data to update
-		
-		$name = $out['clientname'];
-		$descr = $out['descr'];
-		$tags = $out['tags'];
 		if(substr($tags,-1,1) == ",") {
 			//	echo "TRUE";
 			$tags = rtrim($tags, ",");
 		}
-		$out = updateCustomer($id, $name, $descr, $tags);
-		echo json_encode($out['message']);
+		echo $id ."<br />";
+		echo $name ."<br />";
+		echo $descr."<br />";
+		echo $tags ."<br />";
+		print_r($images) ."<br />";
+		//print_r($files) ."<br />";
 
+		//$out = updateCustomer($id, $name, $descr, $tags, $images);
+		//header('Content-type: text/json');
+		//echo json_encode($_GET);
 			
 		
 	}else {
@@ -156,8 +160,9 @@ function getCustomerById($id){
 	return $out;
 	
 }
-function updateCustomer($id, $name, $descr, $tags){
+function updateCustomer($id, $name, $descr, $tags, $images){
 	global $con;
+
 	$query = "UPDATE work SET name='$name', descr='$descr', tags='$tags' WHERE id='$id'";
 	$result = mysqli_query($con, $query);
 	$out=array();

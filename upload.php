@@ -23,7 +23,7 @@ $outjson = json_encode($out); //json encode the array from PHP
 	<div class="uploadArea">
 		<div id="form-area">
 		<h1 id="form-message">Enter a new client</h1>
-		<form id="myForm" name="myForm" enctype="multipart/form-data" onsubmit="return validateForm()" action="<?php bloginfo('url');?>/form-process/" method="post">
+		<form id="myForm" name="myForm" enctype="multipart/form-data" onsubmit="return validateForm()" action="<?php bloginfo('url');?>/form-process/" method="post">
 			<input id="clientname" name="clientname" type="text" class="newcustomer" placeholder="Client Name" />
 			<br /><textarea  id="descr" name="descr" class="newcustomer" placeholder="Enter a description"></textarea>
 			<br />Enter tags (separate with commas)
@@ -32,16 +32,16 @@ $outjson = json_encode($out); //json encode the array from PHP
 				<br />Upload Images
 				<br /><input name="file[]" type="file" id="file"/>
 			</div>
-			
+			<br /><input id="formID" name="formID" type="hidden">
 			<input id="add_more" value="Add More Files" type="submit"/>
 			<br /><br /><input id="submit" type="submit" name="submit" value="Submit" />
 			
 			<br /><input id="editForm" type="submit" name="edit" value="Change" /> 
 			<span id="fileSub"></span>
-			<br /><input id="formID" type="hidden" val="">
+			
 			 		</form>
 		</div>
-		<input id="client-list" type="submit" value="Client List" /> <input id="tags-list" type="submit" value="Tag List" type="submit" />
+		<!-- <input id="client-list" type="submit" value="Client List" /> <input id="tags-list" type="submit" value="Tag List" type="submit" /> -->
 		<div id="input-area">
 		<h1>List of Clients</h1>
 		<p>Click client name to display information below</p>
@@ -181,48 +181,54 @@ $(".client").click(function(e){
 	$("#form-message").text("Edit the client");
 	$("#result-area").show();
 	$("#editForm").show();
-	$("#fileUp").hide();
-	$("#add_more").hide()
+	// $("#fileUp").hide();
+	// $("#add_more").hide()
 	$("#submit").hide();
 	e.preventDefault();
 	var index = $(this).attr('data-row');
 	var table = $(this).attr('data-id');
-	console.log(listclients);
+	//console.log(listclients);
 	var name = listclients[index].name;
 	var image = listclients[index].image;
-	console.log(image);
+	//console.log(image);
 	
 	var desc = listclients[index].desc;
 	var tags = listclients[index].tags;
-	$("#formID").val(table);
+	$("#formID").attr('value', table);
 	$("#clientname").val(name);
 	$("#descr").val(desc);
 	$("#tagsbox").val(tags);
-	
+	$("#myForm").attr('method', 'get');
+	$("#fileUp").html("");
 	if(image.length !== 0){
-		$("#result-image").html("");
-		$("#result-image").html("Images: ");
+		
 		for(var i=0; i<image.length; i++){
 			var im = image[i].url;
 			//console.log(im);
 			im = im.match(/wp-content\/themes\/preened\/photos\/(.*)/);
 			im = im[0];
-			$("#result-image").append("<a target='_blank' href='<?php bloginfo('url'); ?>/"+im+"'>"+image[i].filename+"</a> ");
+			var k=i+1;
+			// $("#fileUp").append("<br />"+k+") <a target='_blank' href='<?php bloginfo('url'); ?>/"+im+"'>"+image[i].filename+"</a><br />");
+			$("#fileUp").append("<div class='fileUpImWrap'>"+k+") <a target='_blank' href='<?php bloginfo('url'); ?>/"+im+"'>"+image[i].filename+"</a>"+"<input name='images[]' type='hidden' value='"+image[i].filename+"' readonly/> | <a href='#' class='deleteImage'>X</a><br /></div>");
 		}	
-	}else{
-		$("#result-image").html("No images.");
 	}
 	
+	$(".deleteImage").click(function(){
+		$(this).parent().remove();
+
+	});
 
 		
 	
 		
 	$("#editForm").click(function(e){
-		e.preventDefault();
-		var index = $("#formID").val();
-		console.log(index);
-		var formData= $("#myForm").serializeArray();
-		console.log(formData);
+		// e.preventDefault();
+		// 
+		// console.log(index);
+		// var formData= $("#myForm").serializeArray();
+		// var newImages = $("#fileUp")
+		// console.log()
+		// console.log(formData);
 		
 		
 		//if the user clicks Edit, then an ajax call gets made
@@ -232,16 +238,16 @@ $(".client").click(function(e){
 		
 		
 		
-		$.ajax({
-			url: "<?php bloginfo('url'); ?>/form-process",
-			data: {id:index, data:formData, action:'edit'},
-			type: "GET",
-			success: function(data){
-				console.log(data);
-				window.location.reload();
-				//window.location.href="<?php bloginfo('url'); ?>/upload/";
-			}
-		});
+		// $.ajax({
+		// 	url: "<?php bloginfo('url'); ?>/form-process",
+		// 	data: {id:index, data:formData, action:'edit'},
+		// 	type: "GET",
+		// 	success: function(data){
+				
+		// 		window.location.reload();
+				
+		// 	}
+		// });
 		
 
 

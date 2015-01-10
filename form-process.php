@@ -35,7 +35,7 @@ if($_POST['edit']){
 		echo "<hr />";
 
 		$out = updateCustomer($id, $name, $descr, $tags, $images, $files, $count);
-		//print_r($out);
+		print_r($out);
 		//echo json_encode($_GET);
 		redirectPage();
 			
@@ -147,7 +147,7 @@ function updateCustomer($id, $name, $descr, $tags, $images, $files, $count){
 		$j++;
 	}
 
-	
+
 	for($i=0; $i<count($out['image']); $i++){
 		
 		$currIm = $out['image'][$i]['filename'];
@@ -155,15 +155,16 @@ function updateCustomer($id, $name, $descr, $tags, $images, $files, $count){
 		if($currIm == $images[$i]){
 			//$outArr['found'][$i] = "Found";
 			//found image, do nothing
+			//problem is there has to be a match, or the records get deleted
 		}else {
 			//delete the row in the workimages 
 			$query = "DELETE FROM workimages WHERE filename='$currIm'";
 			$result = mysqli_query($con, $query);
 			$target_path = "";
 			$target_path = $_SERVER['DOCUMENT_ROOT']."/preened/wp-content/themes/preened/photos/";
-			$target_path = $target_path.$out[$i]['filename'];
+			$target_path = $target_path.$currIm;
 			unlink($target_path);
-			//$out['success'] ="Success";
+			$out['success'] ="Success";
 		}
 	}
 	

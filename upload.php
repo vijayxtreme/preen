@@ -166,7 +166,7 @@ $(".delete").click(function(e){
 			type: "GET",
 			success: function(data){
 				console.log(data);
-				window.location.reload();
+				//window.location.reload();
 				//window.location.href="<?php bloginfo('url'); ?>/upload/";
 			}
 		});
@@ -213,7 +213,10 @@ $(".client").click(function(e){
 	}
 	
 	$(".deleteImage").click(function(){
-		$(this).parent().remove();
+		$(this).prev().attr("value", "");
+		$(this).parent().find('a').css("color", "red", "important");
+		// $("#fileUp").append("<div class='fileUpImWrap'>"+k+") <a target='_blank' href='<?php bloginfo('url'); ?>/"+im+"'>"+image[i].filename+"</a>"+"<input name='images[]' type='hidden' value='"+image[i].filename+"' readonly/> | <a href='#' class='deleteImage'>X</a><br /></div>");
+
 
 	});
 

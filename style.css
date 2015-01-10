@@ -126,7 +126,7 @@ ul li {
     padding-top: 162px;
     /* Nesting via SASS */ }
     #primary a {
-      color: #3f3f3f !important;
+      color: #3f3f3f;
       text-decoration: none; }
   img.preenlogo {
     position: absolute;
@@ -192,9 +192,9 @@ ul li {
       margin: 0;
       line-height: 14px;
       font-size: 10px;
-      color: #3f3f3f !important; }
+      color: #3f3f3f; }
   .picstext {
-    color: #3f3f3f !important; }
+    color: #3f3f3f; }
   #spinner {
     display: none;
     position: absolute;
@@ -432,4 +432,4 @@ ul li {
   #mobile_nav, #contact-area-m, .socialmedia-m, #client-list, #tags-list {
     display: none; }
   .selected {
-    color: #3f3f3f !important; } }
+    color: #3f3f3f; } }

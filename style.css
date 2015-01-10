@@ -221,6 +221,7 @@ ul li {
     float: left;
     font-size: 11px;
     height: 670px;
+    width: 512px;
     overflow-y: scroll;
     overflow-x: none;
     padding-left: 50px; }

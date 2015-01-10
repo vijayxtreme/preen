@@ -76,11 +76,10 @@ $(function(){
 
 	//Press Mouseover & Click
 	$(function(){
-	$("#press p").hide();
-	$("#press a").mouseover(function(){
-		
-		var idx=$(this);
-		var text = $(this).siblings();
+		$("#press p").hide();
+
+		var idx=$("#press a:first");
+		var text = $(idx).siblings();
 		//console.log(text);
 		var txt = "";
 		text.each(function(k, v){
@@ -92,48 +91,65 @@ $(function(){
 
 		});
 		
-		//console.log(txt);
 		var pressPanel = document.getElementById('press-panel');
 		pressPanel.innerHTML = txt;
-		var link = $(this).attr('href');
+		var link = $(idx).attr('href');
 		var linked = "<a target='_blank' href='"+link+"'>"+link+"</a>";
 		$("#press-panel").append(linked);
 		$("#press-panel p").show();
 
-
-	});
 	
-	$("#press a").click(function(e){
-		e.preventDefault();
-		 $("html, body").animate({ scrollTop: 0 }, "slow");
-		var idx=$(this);
-		var text = $(this).siblings();
-		//console.log(text);
-		var txt = "";
-		text.each(function(k, v){
-			if(v.innerHTML=="&nbsp;"){
-				//
-			}else{
-				txt += v.outerHTML;
-			}
+		$("#press a").mouseover(function(){
+		
+			var idx=$(this);
+			var text = $(this).siblings();
+			//console.log(text);
+			var txt = "";
+			text.each(function(k, v){
+				if(v.innerHTML=="&nbsp;"){
+					//
+				}else{
+					txt += v.outerHTML;
+				}
+
+			});
+			//console.log(txt);
+			var pressPanel = document.getElementById('press-panel');
+			pressPanel.innerHTML = txt;
+			var link = $(this).attr('href');
+			var linked = "<a target='_blank' href='"+link+"'>"+link+"</a>";
+			$("#press-panel").append(linked);
+			$("#press-panel p").show();
+		});
+
+
+		$("#press a").click(function(e){
+			e.preventDefault();
+			 $("html, body").animate({ scrollTop: 0 }, "slow");
+			var idx=$(this);
+			var text = $(this).siblings();
+			//console.log(text);
+			var txt = "";
+			text.each(function(k, v){
+				if(v.innerHTML=="&nbsp;"){
+					//
+				}else{
+					txt += v.outerHTML;
+				}
+
+			});
+			
+			//console.log(txt);
+			
+			pressPanel.innerHTML = txt;
+			var link = $(this).attr('href');
+			var linked = "<a target='_blank' href='"+link+"'>"+link+"</a>";
+			$("#press-panel").append(linked);
+
+			$("#press-panel p").show();
 
 		});
-		
-		//console.log(txt);
-		var pressPanel = document.getElementById('press-panel');
-		pressPanel.innerHTML = txt;
-		var link = $(this).attr('href');
-		var linked = "<a target='_blank' href='"+link+"'>"+link+"</a>";
-		$("#press-panel").append(linked);
-
-		$("#press-panel p").show();
-
-
 	});
-
-
-	
-});
 
 	
 });

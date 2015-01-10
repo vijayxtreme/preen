@@ -214,7 +214,7 @@ $(".client").click(function(e){
 	
 	$(".deleteImage").click(function(){
 		$(this).prev().attr("value", "");
-		$(this).parent().find('a').css("color", "red", "important");
+		$(this).parent().css("display", "none");
 		// $("#fileUp").append("<div class='fileUpImWrap'>"+k+") <a target='_blank' href='<?php bloginfo('url'); ?>/"+im+"'>"+image[i].filename+"</a>"+"<input name='images[]' type='hidden' value='"+image[i].filename+"' readonly/> | <a href='#' class='deleteImage'>X</a><br /></div>");
 
 

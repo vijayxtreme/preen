@@ -91,8 +91,8 @@ $(function(){
 
 		});
 		
-		var pressPanel = document.getElementById('press-panel');
-		pressPanel.innerHTML = txt;
+		var pressPanel = $("#press-panel");
+		pressPanel.html(txt);
 		var link = $(idx).attr('href');
 		var linked = "<a target='_blank' href='"+link+"'>"+link+"</a>";
 		$("#press-panel").append(linked);

@@ -63,9 +63,10 @@ for($i=0; $i<$count; $i++){
 				echo "<li class='links'><a class='all-1 ".$out[$i]["name"]."' data-attribute='".$out[$i]["name"]."' href='#'>".strtoupper($out[$i]['name'])."</a></li>";
 			}
 */
+
 			
 			foreach($out as $key=>$val){
-				echo "<li class='links'><a class='all-1 ".$out[$key]["name"]."' data-attribute='".$out[$key]["name"]."' href='#'>".strtoupper($out[$key]['name'])."</a></li>";
+				echo "<li class='links'><a class='all-1 ".str_replace(" ", "-", $out[$key]["name"])."' data-attribute='".$out[$key]["name"]."' href='#'>".strtoupper($out[$key]['name'])."</a></li>";
 			}
 		
 		?>
@@ -227,8 +228,8 @@ $(".links").click(function(e){
 		
 	}
 	name = name.split(" ");
-	name = name[0];
-	//console.log("name",name);
+	name = name.join("-");
+	console.log(name);
 	$("."+name+"").fadeTo(0,"0.4").fadeTo(1500,"1.0").css({"color":"#181804"});
 	
 	//console.log(obj);

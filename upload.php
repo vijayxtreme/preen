@@ -198,7 +198,6 @@ $(".client").click(function(e){
 	$("#clientname").val(name);
 	$("#descr").val(desc);
 	$("#tagsbox").val(tags);
-	$("#myForm").attr('method', 'get');
 	$("#fileUp").html("");
 	if(image.length !== 0){
 		

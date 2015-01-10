@@ -19,49 +19,34 @@ if($_GET){
 		
 		echo json_encode($out);	
 		
-	}else if($_GET['edit']){
-		$id = $_GET['formID'];
-		$name = $_GET['clientname'];
-		$descr = $_GET['descr'];
-		$tags = $_GET['tags'];
-		$images = $_GET['images'];
-		$files = $_GET['file'];
-
-		$images = array_merge($images, $files);
-		$files ="";
-		
-		if(substr($tags,-1,1) == ",") {
-			//	echo "TRUE";
-			$tags = rtrim($tags, ",");
-		}
-		echo $id ."<br />";
-		echo $name ."<br />";
-		echo $descr."<br />";
-		echo $tags ."<br />";
-		print_r($images) ."<br />";
-		//print_r($files) ."<br />";
-
-		//$out = updateCustomer($id, $name, $descr, $tags, $images);
-		//header('Content-type: text/json');
-		//echo json_encode($_GET);
-
-	
+	}
 	
 }
+if($_POST['edit']){
+		$id = $_POST['formID'];
+		$name = $_POST['clientname'];
+		$descr = $_POST['descr'];
+		$tags = cleanTags($_POST['tags']);	
+		$images = $_POST['images'];
+		$files = $_FILES['file'];
+		$count = count($_FILES['file']['name']);
+		//echo $count;
+		
 
-//If someone posted a new user...
-if($_POST['submit']){
+		//$out = updateCustomer($id, $name, $descr, $tags, $images, $files, $count);
+	
+		//echo json_encode($_GET);
+			
+}elseif($_POST['submit']){
 
 	/*============================================ GET NEW CLIENT INFO, UP TO MYSQL */
 	$name = ucfirst($_POST['clientname']);
 	$descr = $_POST['descr'];
-	$tags = $_POST['tags'];
-	$tags = trim($tags);
+	$tags = cleanTags($_POST['tags']);	
+	$count = count($_FILES['file']['name']);
+	$files = $_FILES['file'];
 	//echo substr($tags,-1,1)."<br />";
-	if(substr($tags,-1,1) == ",") {
-	//	echo "TRUE";
-		$tags = rtrim($tags, ",");
-	}
+	
 	//echo $tags;
 	//echo $name." ".$desc." ".$sec;
 		
@@ -71,53 +56,25 @@ if($_POST['submit']){
 	mysqli_query($con, $query) or die(mysqli_error($con));
 	$id = getID($name); //get the ID, for below
 	
-    /*============================================= IMAGE UPLOADS =*/
-    
-	$j = 0; //Variable for indexing uploaded image 
-    
-	 
-	//Declaring Path for uploaded images
-	//echo file_exists($target_path) ? "TRUE" : "FALSE";
-    for ($i = 0; $i < count($_FILES['file']['name']); $i++) {//loop to get individual element from the array
-		$target_path = "";
-		$target_path = $_SERVER['DOCUMENT_ROOT']."/preened/wp-content/themes/preened/photos/";
-        $validextensions = array("jpeg", "jpg", "png");  //Extensions which are allowed
-        $ext = explode('.', basename($_FILES['file']['name'][$i]));//explode file name from dot(.) 
-        $file_extension = end($ext); //store extensions in the variable
-        $imagename = "";
-        $imagename = basename($_FILES['file']['name'][$i], ".".$file_extension);
-		//echo $imagename;
+	$message = uploadImages($count, $files, $id); 
+	print_r($message);
+ //    $url = get_bloginfo('url');
+ //    $url .= "/upload/";
+	// echo "Returning you back to <a href='".$url."'>upload</a> page";
+	// sleep(3); //sleep 5 seconds, then return user to main page.
+ //   echo'<script> window.location="'.$url.'"; </script> ';	
+}else {
+	// Do nothing.
+}
 
-		$target_path = $target_path . $imagename. "." . $ext[count($ext) - 1];//set the target path with a new name of image
-        $j = $j + 1;//increment the number of uploaded images according to the files in array       
-      
-	  
-		if (($_FILES["file"]["size"][$i] < 10000000) //Approx. 10MB files can be uploaded.
-                && in_array($file_extension, $validextensions)) {
+function cleanTags($tags){
 
-
-            if (move_uploaded_file($_FILES['file']['tmp_name'][$i], $target_path)) {//if file moved to uploads folder
-                echo $j. ').<span id="noerror">Image uploaded successfully!.</span><br/><br/>';
-                $file = $imagename.".".$file_extension;
-                	$query = "INSERT INTO workimages (filename, url,photo_id) ";
-					$query .= "VALUES ('$file','$target_path','$id')";
-               	mysqli_query($con, $query) or die(mysqli_error($con));
-			   	//echo $query;
-
-                
-            } else {//if file was not moved.
-                echo $j. ').<span id="error">please try again!</span><br/><br/>';
-            }
-        } else {//if file size and file type was incorrect.
-            echo $j. ').<span id="error">No Additional Photos Were Uploaded</span><br/><br/>';
-        }
-
-    }
-    $url = get_bloginfo('url');
-    $url .= "/upload/";
-	echo "Returning you back to <a href='".$url."'>upload</a> page";
-	sleep(3); //sleep 5 seconds, then return user to main page.
-    echo'<script> window.location="'.$url.'"; </script> ';	
+	$tags = trim($tags);
+	if(substr($tags,-1,1) == ",") {
+	//	echo "TRUE";
+		$tags = rtrim($tags, ",");
+	}
+	return $tags;
 }
 
 
@@ -156,7 +113,7 @@ function getCustomerById($id){
 	return $out;
 	
 }
-function updateCustomer($id, $name, $descr, $tags, $images){
+function updateCustomer($id, $name, $descr, $tags, $images, $count){
 	global $con;
 
 	$query = "UPDATE work SET name='$name', descr='$descr', tags='$tags' WHERE id='$id'";
@@ -194,7 +151,6 @@ function deleteCustomer($id){
 	return $result ? "Success" : "Error";
 }
 
-
 function getCustomers(){
 	global $con;
 	$query = "SELECT * FROM work";
@@ -219,7 +175,60 @@ function getCustomers(){
 
 }
 
+function uploadImages($count, $files, $id){
+	global $con;
+	/*============================================= IMAGE UPLOADS =*/
+    
+	$j = 0; //Variable for indexing uploaded image 
+    
 
+	//Declaring Path for uploaded images
+	$out = array();
+	$out['message'] ="";
+
+    for ($i = 0; $i < $count; $i++) {//loop to get individual element from the array
+		$target_path = "";
+		$target_path = $_SERVER['DOCUMENT_ROOT']."/preened/wp-content/themes/preened/photos/";
+        $validextensions = array("jpeg", "jpg", "png", "JPG", "PNG", "JPEG");  //Extensions which are allowed
+        $ext = explode('.', basename($files['name'][$i]));//explode file name from dot(.) 
+        $file_extension = end($ext); //store extensions in the variable
+        
+        $imagename = "";
+        $imagename = basename($files['name'][$i], ".".$file_extension);
+		//echo $imagename;
+
+		$target_path = $target_path . $imagename. "." . $ext[count($ext) - 1];//set the target path with a new name of image
+      
+        $j = $j + 1;//increment the number of uploaded images according to the files in array       
+      
+	
+		if (($files["size"][$i] < 10000000) //Approx. 10MB files can be uploaded.
+                && in_array($file_extension, $validextensions)) {
+
+
+            if (move_uploaded_file($files['tmp_name'][$i], $target_path)) {
+            	//if file moved to uploads folder
+                //success
+
+                $file = $imagename.".".$file_extension;
+                $query = "INSERT INTO workimages (filename, url,photo_id) ";
+				$query .= "VALUES ('$file','$target_path','$id')";
+               	mysqli_query($con, $query) or die(mysqli_error($con));
+                $out['message'] = "Success";
+            } else {
+               //error with upload
+            	$out['message'] = "Error with upload";
+            }
+        } else {
+        	//error with file size
+        	$out['message'] = "Error with filesize";
+        }
+
+    }
+
+    return $out;
+
+}
 
 
 ?>

@@ -166,7 +166,7 @@ $(".delete").click(function(e){
 			type: "GET",
 			success: function(data){
 				console.log(data);
-				//window.location.reload();
+				window.location.reload();
 				//window.location.href="<?php bloginfo('url'); ?>/upload/";
 			}
 		});

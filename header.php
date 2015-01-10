@@ -62,7 +62,7 @@
 </div>
 <div id="google-map" onclick="location.href='#';" style="cursor: pointer;">
 
-	<a target="_blank" href="https://www.google.com/maps/preview?ie=UTF-8&fb=1&gl=us&sll=34.0654793,-118.238679&sspn=0.0273035,0.0439464&q=831+Chung+King+Rd,+Los+Angeles,+CA+90012&ei=cOkHVNPaM8SuggTulIC4AQ&ved=0CB8Q8gEwAA">831 CHUNG KING ROAD
+	<a target="_blank" href="https://www.google.com/maps/preview?ie=UTF-8&fb=1&gl=us&sll=34.0654793,-118.238679&sspn=0.0273035,0.0439464&q=831+Chung+King+Rd,+Los+Angeles,+CA+90012&ei=cOkHVNPaM8SuggTulIC4AQ&ved=0CB8Q8gEwAA">931 CHUNG KING ROAD
 	LOS ANGELES, CA 90012</a>
 	TEL +1 (213) 625-2100
 	</div>

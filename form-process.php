@@ -31,11 +31,13 @@ if($_POST['edit']){
 		$files = $_FILES['file'];
 		$count = count($_FILES['file']['name']);
 		//echo $count;
-		
+		print_r($images);
+		echo "<hr />";
 
-		//$out = updateCustomer($id, $name, $descr, $tags, $images, $files, $count);
-	
+		$out = updateCustomer($id, $name, $descr, $tags, $images, $files, $count);
+		//print_r($out);
 		//echo json_encode($_GET);
+		redirectPage();
 			
 }elseif($_POST['submit']){
 
@@ -57,15 +59,21 @@ if($_POST['edit']){
 	$id = getID($name); //get the ID, for below
 	
 	$message = uploadImages($count, $files, $id); 
-	print_r($message);
- //    $url = get_bloginfo('url');
- //    $url .= "/upload/";
-	// echo "Returning you back to <a href='".$url."'>upload</a> page";
-	// sleep(3); //sleep 5 seconds, then return user to main page.
- //   echo'<script> window.location="'.$url.'"; </script> ';	
+	//print_r($message);
+	redirectPage();
+  
 }else {
 	// Do nothing.
 }
+
+function redirectPage(){
+	$url = get_bloginfo('url');
+    $url .= "/upload/";
+	echo "Returning you back to <a href='".$url."'>upload</a> page";
+	sleep(3); //sleep 5 seconds, then return user to main page.
+   	echo'<script> window.location="'.$url.'"; </script> ';	
+}
+
 
 function cleanTags($tags){
 
@@ -113,14 +121,56 @@ function getCustomerById($id){
 	return $out;
 	
 }
-function updateCustomer($id, $name, $descr, $tags, $images, $count){
-	global $con;
 
-	$query = "UPDATE work SET name='$name', descr='$descr', tags='$tags' WHERE id='$id'";
-	$result = mysqli_query($con, $query);
-	$out=array();
-	$out = getCustomerById($id);
-	$out['message']="Success";
+function updateCustomer($id, $name, $descr, $tags, $images, $files, $count){
+	global $con;
+	//check everything first
+
+	//$query = "UPDATE work SET name='$name', descr='$descr', tags='$tags' WHERE id='$id'";
+	//$result = mysqli_query($con, $query);
+	
+
+	//updates the table on the work side, still need to update the photos
+	//for the images, I need to get each one out of the array $images
+	//then I need to compare the mysql table to tell it hey, if you have this file already do nothing
+	//or if your list is different from my list, only keep the files I have sent back
+	//delete any file that isn't in my list.  So a for loop that looks at each key, if key matches
+	//my list, do nothing, else, delete row
+
+	$query = "SELECT * FROM workimages WHERE photo_id='$id'";
+	$imresult = mysqli_query($con, $query);
+	$j=0;
+
+	$out = array();
+	while($imrow = mysqli_fetch_array($imresult)){
+		$out['image'][$j] = array('filename'=>$imrow['filename'], 'url'=>$imrow['url']);	
+		$j++;
+	}
+
+	
+	for($i=0; $i<count($out['image']); $i++){
+		
+		$currIm = $out['image'][$i]['filename'];
+
+		if($currIm == $images[$i]){
+			//$outArr['found'][$i] = "Found";
+			//found image, do nothing
+		}else {
+			//delete the row in the workimages 
+			$query = "DELETE FROM workimages WHERE filename='$currIm'";
+			$result = mysqli_query($con, $query);
+			$target_path = "";
+			$target_path = $_SERVER['DOCUMENT_ROOT']."/preened/wp-content/themes/preened/photos/";
+			$target_path = $target_path.$out[$i]['filename'];
+			unlink($target_path);
+			//$out['success'] ="Success";
+		}
+	}
+	
+	$out = uploadImages($count, $files, $id); 
+	//finally from the files array, move these new files and add them to the table based on the id
+	//i give you.
+
 	return $out;
 
 }
